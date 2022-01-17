@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sothree.slidinguppanel.SlidingUpPanelLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:gravity="bottom"
+    app:umanoPanelHeight="70dp"
+    app:umanoShadowHeight="0dp"
+    app:umanoFadeColor="@android:color/transparent"
+    app:umanoOverlay="true">
+
+
+    <!--Layout Utama-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background">
+
+
+        <TextView
+            android:id="@+id/judul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/chivo_black"
+            android:text="Baby Name"
+            android:textSize="42sp"
+            android:textColor="@color/putih"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></TextView>
+
+        <TextView
+            android:id="@+id/judul1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/chivo"
+            android:text="Generator"
+            android:textColor="@color/putih"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="@+id/judul"
+            app:layout_constraintTop_toBottomOf="@+id/judul"></TextView>
+
+        <!--Spinner (Drop Down Menu)-->
+
+        <TextView
+            android:id="@+id/label_nama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="80dp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Nama Keluarga : "
+            android:textColor="@color/putih"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="@+id/t_nama_belakang"
+            app:layout_constraintTop_toBottomOf="@+id/judul"></TextView>
+
+        <EditText
+            android:id="@+id/t_nama_belakang"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_field"
+            android:fontFamily="@font/roboto_medium"
+            android:hint="Masukan nama keluarga"
+            android:paddingStart="16dp"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/label_nama"></EditText>
+
+        <!--Personality-->
+        <TextView
+            android:id="@+id/label_personality"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Personality : "
+            android:textColor="@color/putih"
+            android:textSize="15sp"
+            android:layout_marginTop="30dp"
+            app:layout_constraintStart_toStartOf="@+id/t_nama_belakang"
+            app:layout_constraintTop_toBottomOf="@+id/t_nama_belakang" />
+
+
+        <Spinner
+            android:id="@+id/btn_spinner"
+            android:layout_width="130dp"
+            android:layout_height="40dp"
+            android:popupBackground="@drawable/bg_field"
+            android:background="@drawable/bg_field"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="@+id/label_personality"
+            app:layout_constraintTop_toBottomOf="@+id/label_personality"></Spinner>
+
+
+
+        <!--Negara-->
+        <TextView
+            android:id="@+id/label_negara"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Negara : "
+            android:textColor="@color/putih"
+            android:textSize="15sp"
+            android:layout_marginTop="30dp"
+            app:layout_constraintStart_toStartOf="@+id/btn_spinner"
+            app:layout_constraintTop_toBottomOf="@+id/btn_spinner" />
+
+
+        <Spinner
+            android:id="@+id/btn_spinner2"
+            android:layout_width="130dp"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_field"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="@+id/label_negara"
+            app:layout_constraintTop_toBottomOf="@+id/label_negara"></Spinner>
+
+        <!--Kata-->
+        <TextView
+            android:id="@+id/label_kata"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/roboto_bold"
+            android:text="Jumlah Kata : "
+            android:textColor="@color/putih"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="@+id/btn_spinner3"
+            app:layout_constraintTop_toTopOf="@+id/label_negara" />
+
+        <Spinner
+            android:id="@+id/btn_spinner3"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_field"
+            android:layout_marginStart="40dp"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_spinner2"
+            app:layout_constraintStart_toEndOf="@+id/btn_spinner2"
+            app:layout_constraintTop_toTopOf="@+id/btn_spinner2"></Spinner>
+
+        <!--Switch (Button Pencet Kiri Kanan)-->
+
+        <!--Text Input-->
+
+        <Switch
+            android:id="@+id/btn_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_spinner"
+            app:layout_constraintStart_toEndOf="@+id/btn_spinner"
+            app:layout_constraintTop_toTopOf="@+id/btn_spinner"></Switch>
+
+        <TextView
+            android:id="@+id/t_textswitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_black"
+            android:text="Perempuan"
+            android:textColor="@color/putih"
+            android:layout_marginStart="7dp"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_switch"
+            app:layout_constraintStart_toEndOf="@+id/btn_switch"
+            app:layout_constraintTop_toTopOf="@+id/btn_switch"
+            />
+
+
+        <Button
+            android:id="@+id/button01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GENERATE"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="50dp"
+            android:fontFamily="@font/roboto_black"
+            android:textColor="@color/putih"
+            android:background="@drawable/bg_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_spinner3" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <!--Layout Kedua (Slide Up)-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_weight="0.86"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_news">
+
+        <include layout="@layout/news"></include>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</com.sothree.slidinguppanel.SlidingUpPanelLayout>

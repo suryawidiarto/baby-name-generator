@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondActivity"
+    android:background="@drawable/background">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nama terbaik : "
+            android:fontFamily="@font/chivo_black"
+            android:textColor="@color/putih"
+            android:textSize="13sp"
+            android:layout_marginBottom="13dp"
+            app:layout_constraintBottom_toTopOf="@+id/t_result2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/judul2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/chivo_black"
+            android:text="Baby Name"
+            android:textSize="42sp"
+            android:textColor="@color/putih"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></TextView>
+
+        <TextView
+            android:id="@+id/judul3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/chivo"
+            android:text="Generator"
+            android:textColor="@color/putih"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="@+id/judul2"
+            app:layout_constraintTop_toBottomOf="@+id/judul2"></TextView>
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/t_arti">
+
+                <Button
+                    android:id="@+id/btn_copy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="38dp"
+                    android:layout_marginRight="30dp"
+                    android:paddingHorizontal="10dp"
+                    android:background="@drawable/bg_button"
+                    android:fontFamily="@font/roboto_black"
+                    android:text="Copy Nama"
+                    android:textColor="@color/putih" />
+                <Button
+                    android:id="@+id/button02"
+                    android:layout_width="wrap_content"
+                    android:layout_height="38dp"
+                    android:background="@drawable/bg_field"
+                    android:fontFamily="@font/roboto_black"
+                    android:text="Cari Lagi"
+                    android:textColor="@color/colorPrimary" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/t_result2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_field"
+            android:fontFamily="@font/roboto_black"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="10dp"
+            android:text="HEYAHEYA"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="23sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/judul2"
+            app:layout_constraintVertical_bias="0.200" />
+
+        <TextView
+            android:id="@+id/t_x_arti"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="Arti nama ini :"
+            android:textColor="@color/putih"
+            android:fontFamily="@font/chivo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/t_result2" />
+        <TextView
+            android:id="@+id/t_arti"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:textSize="18sp"
+            android:textAlignment="center"
+            android:text="arti"
+            android:textColor="@color/putih"
+            android:fontFamily="@font/roboto_black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/t_x_arti" />
+
+        <TextView
+            android:id="@+id/t_balik"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_black"
+            android:text="BACK TO HOME"
+            android:layout_marginTop="30dp"
+            android:textColor="@color/putih"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
